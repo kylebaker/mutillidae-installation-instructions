@@ -134,3 +134,16 @@ It is done
 
 ===
 
+## Install Mutillidae on Linux (Ubuntu Server 19.10 on Raspberry Pi 3)
+
+The same as above, but change the packages to the following:
+
+`apt install -y apache2 php libapache2-mod-php mysql-server php-mysql php7.3-xml php7.3-curl php7.3-mbstring git`
+
+And for the MySQL part, use these commands instead of the ones listed above:
+
+`ALTER USER 'root'@'localhost' IDENTIFIED BY 'mutillidae';`
+
+`update user set plugin='mysql_native_password' where user='root';`
+
+Everything else should be the same.
